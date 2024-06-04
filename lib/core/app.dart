@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:phaseone/home_page.dart';
+import 'package:phaseone/pages/profile_page.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -8,7 +8,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: ProfilePage(),
     );
   }
 }
