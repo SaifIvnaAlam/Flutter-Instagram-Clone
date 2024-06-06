@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:phaseone/widgets/following_card.dart';
+import 'package:phaseone/widgets/kbutton.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -7,27 +9,19 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SafeArea(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Column(
           children: [
-            Column(
-              children: [
-                Text("11"),
-                Text("Posts"),
-              ],
+            FollowingCard(),
+            SizedBox(
+              height: 200,
             ),
-            SizedBox(width: 10),
-            Column(
+            Row(
               children: [
-                Text("111"),
-                Text("followers"),
-              ],
-            ),
-            SizedBox(width: 10),
-            Column(
-              children: [
-                Text("289"),
-                Text("following"),
+                KButton(),
+                SizedBox(
+                  width: 10,
+                ),
+                KButton()
               ],
             ),
           ],
@@ -36,3 +30,14 @@ class ProfilePage extends StatelessWidget {
     );
   }
 }
+
+
+
+//  Container(
+//               height: 40,
+//               width: 200,
+//               decoration: BoxDecoration(
+//                 borderRadius: BorderRadius.circular(10),
+//                 color: Colors.black54,
+//               ),
+//             ),
