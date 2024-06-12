@@ -17,11 +17,9 @@ class ProfilePage extends StatelessWidget {
             ),
             Row(
               children: [
-                KButton(),
-                SizedBox(
-                  width: 10,
-                ),
-                KButton()
+                KButton(btnText: "Button One"),
+                SizedBox(width: 10),
+                KButton(btnText: "Button Two"),
               ],
             ),
           ],

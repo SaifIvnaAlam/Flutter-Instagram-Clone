@@ -1,10 +1,10 @@
 import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class KButton extends StatelessWidget {
-  const KButton({
-    super.key,
-  });
+  const KButton({super.key, required this.btnText});
+  final String btnText;
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +19,10 @@ class KButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           color: const Color(0xff262626),
         ),
-        child: const Center(
+        child: Center(
           child: Text(
-            "Share Profile",
-            style: TextStyle(color: Colors.white),
+            btnText,
+            style: const TextStyle(color: Colors.white),
           ),
         ),
       ),
