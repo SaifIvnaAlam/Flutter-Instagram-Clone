@@ -1,17 +1,15 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 class KButton extends StatelessWidget {
-  const KButton({super.key, required this.btnText});
-  final String btnText;
+  const KButton({super.key, required this.btnName, required this.myOnTap});
+
+  final String btnName;
+  final VoidCallback myOnTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        log("Edit Button Pressed");
-      },
+      onTap: myOnTap,
       child: Container(
         height: 40,
         width: 150,
@@ -21,7 +19,7 @@ class KButton extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            btnText,
+            btnName,
             style: const TextStyle(color: Colors.white),
           ),
         ),

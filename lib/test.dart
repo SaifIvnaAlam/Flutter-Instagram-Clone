@@ -1,1 +1,0 @@
-List<String> test= ["E1", "E2"];

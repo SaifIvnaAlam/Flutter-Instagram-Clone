@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:phaseone/pages/profile_page.dart';
+import 'package:phaseone/widgets/kbutton.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -8,14 +9,16 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: TextButton(
-          onPressed: () {
+        child: KButton(
+          btnName: "Profile Page",
+          myOnTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const ProfilePage()),
+              MaterialPageRoute(
+                builder: (context) => const ProfilePage(),
+              ),
             );
           },
-          child: const Text("Profile Page"),
         ),
       ),
     );

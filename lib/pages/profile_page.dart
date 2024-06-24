@@ -1,25 +1,33 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
-import 'package:phaseone/widgets/following_card.dart';
 import 'package:phaseone/widgets/kbutton.dart';
+import 'package:phaseone/widgets/following_card.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
-            FollowingCard(),
-            SizedBox(
+            const FollowingCard(),
+            const SizedBox(
               height: 200,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                KButton(btnText: "Button One"),
-                SizedBox(width: 10),
-                KButton(btnText: "Button Two"),
+                KButton(
+                  btnName: "Button One",
+                  myOnTap: () {},
+                ),
+                const SizedBox(width: 10),
+                KButton(
+                  btnName: "Button Style",
+                  myOnTap: () {},
+                ),
               ],
             ),
           ],
